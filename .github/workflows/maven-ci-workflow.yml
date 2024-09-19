@@ -60,7 +60,7 @@ jobs:
         version: ${{ env.GCP_VERSION}}
         service_account_key: ${{secrets[env.GOOGLE_APPLICATION_CREDENTIALS_KEY]}}
     - name: GCP auth
-      uses: 'google-github-actions/auth@v0'
+      uses: 'google-github-actions/auth@v2'
       with:
         credentials_json: '${{secrets[env.GOOGLE_APPLICATION_CREDENTIALS_KEY]}}'        
     - name: Code Sanitize
